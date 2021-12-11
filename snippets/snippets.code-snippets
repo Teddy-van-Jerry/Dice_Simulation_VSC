@@ -1,0 +1,52 @@
+{
+    "DS Global": {
+        "prefix": ["#DS_BEGIN_GLOBAL"],
+        "body": [
+            "#DS_BEGIN_GLOBAL",
+            "\t\"Version\": \"${1:0.0.3}\" // Version of Dice Simulation",
+            "\t\"Gravity\": ${2:9.81} // [N/kg]",
+            "#DS_END_GLOBAL"
+        ],
+        "description": "Dice Simulation Global Settings"
+    },
+    "DS Dice": {
+        "prefix": ["#DS_BEGIN_DICE"],
+        "body": [
+            "#DS_BEGIN_DICE",
+            "\t\"Name\": ${1:dice}",
+            "\t\"Type\": ${2} // Dice Type (\"Box\", \"Cylinder\")",
+            "\t\"Damping\": ${3:0} // Velocity Damping",
+            "\t\"Friction\": [\"${5:mu}\"] ${4:0} // Friction Coefficient",
+            "\t\"Position\": [\"${7:pos0}\"] (${6:0, 0, 0}) // Initial Position",
+            "\t\"Velocity\": [\"${9:v0}\"] (${8:0, 0, 0}) // Initial Velocity",
+            "#DS_END_DICE"
+        ],
+        "description": "Dice Simulation Settings for a Dice"
+    },
+    "DS Task": {
+        "prefix": ["#DS_BEGIN_TASK"],
+        "body": [
+            "#DS_BEGIN_TASK",
+            "\t\"Name\": ${1:task}",
+            "#DS_END_TASK"
+        ],
+        "description": "Dice Simulation Task"
+    },
+    "DS CPP": {
+        "prefix": "#DS_BEGIN_CPP",
+        "body": [
+            "#DS_BEGIN_CPP",
+            "${1}",
+            "#DS_END_CPP"
+        ],
+        "description": "C++ Code (Especially Functions) Embedded in Dice Simulation"
+    },
+    "DS Process": {
+        "prefix": ["#DS_BEGIN_PROCESS"],
+        "body": [
+            "#DS_BEGIN_PROCESS",
+            "\t${1}",
+            "#DS_END_PROCESS"
+        ]
+    }
+}

@@ -1,9 +1,9 @@
 {
-  "name": "dice-simulation",
+	"name": "dice-simulation",
 	"displayName": "Dice Simulation",
 	"description": "Code Support for Dice Simulation",
 	"version": "0.0.1",
-	"publisher": "Teddy van Jerry",
+	"publisher": "Teddy-van-Jerry",
 	"repository": "https://github.com/Teddy-van-Jerry/Dice_Simulation_VSC",
 	"engines": {
 		"vscode": "^1.63.0"
@@ -22,7 +22,24 @@
 				"command": "dice-simulation.helloWorld",
 				"title": "Hello World"
 			}
-		]
+		],
+		"languages": [{
+            "id": "ds",
+            "aliases": ["Dice Simulation", "ds"],
+            "extensions": [".ds",".ds-cpp",".ds-h"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ds",
+            "scopeName": "source.ds",
+            "path": "./syntaxes/ds.tmLanguage.json"
+        }],
+		"snippets": [
+            {
+                "language": "ds",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
