@@ -1,7 +1,8 @@
 # Dice Simulation VS Code Extension
 
-[![VSMarket: version](https://vsmarketplacebadge.apphb.com/version/Teddy-van-Jerry.dice-simulation.svg?color=blueviolet&logo=visual-studio-code&style=?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=Teddy-van-Jerry.dice-simulation)
-[![installs](https://img.shields.io/vscode-marketplace/d/Teddy-van-Jerry.dice-simulation?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=Teddy-van-Jerry.dice-simulation)
+[![VSMarket: version](https://vsmarketplacebadge.apphb.com/version-short/Teddy-van-Jerry.dice-simulation.svg?color=blueviolet&logo=visual-studio-code&style=?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=Teddy-van-Jerry.dice-simulation)
+[![installs](https://vsmarketplacebadge.apphb.com/installs/teddy-van-jerry.dice-simulation.svg?color=blue)](https://marketplace.visualstudio.com/items?itemName=Teddy-van-Jerry.dice-simulation)
+[![downloads](https://vsmarketplacebadge.apphb.com/downloads/teddy-van-jerry.dice-simulation.svg?color=green)](https://marketplace.visualstudio.com/items?itemName=Teddy-van-Jerry.dice-simulation)
 
 ![Dice Simulation Banner](img/icons/ds-banner.png)
 
