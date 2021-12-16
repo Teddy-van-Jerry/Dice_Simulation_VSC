@@ -2,11 +2,23 @@
 	"name": "dice-simulation",
 	"displayName": "Dice Simulation",
 	"description": "Code Support for Dice Simulation",
-	"version": "0.0.1",
+	"icon": "./img/icons/ds-icon_256.png",
+	"version": "0.0.2",
 	"publisher": "Teddy-van-Jerry",
-	"repository": "https://github.com/Teddy-van-Jerry/Dice_Simulation_VSC",
+	"author": {
+		"name": "Teddy van Jerry",
+		"email": "me@teddy-van-jerry.org",
+		"url": "https://teddy-van-jerry.org"
+	},
+	"license": "MIT License",
+	"keywords": ["Dice", "Simulation", "Physics"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Teddy-van-Jerry/Dice_Simulation_VSC"
+	},
+	"homepage": "https://dice.teddy-van-jerry.org",
 	"engines": {
-		"vscode": "^1.63.0"
+		"vscode": "^1.50.0"
 	},
 	"categories": [
 		"Programming Languages",
