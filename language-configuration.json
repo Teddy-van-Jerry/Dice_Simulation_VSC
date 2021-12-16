@@ -12,7 +12,10 @@
         ["(", ")"],
         ["#DS_BEGIN_GLOBAL", "#DS_END_GLOBAL"],
         ["#DS_BEGIN_TASK", "#DS_END_TASK"],
-        ["#DS_BEGIN_DICE", "#DS_END_DICE"]
+        ["#DS_BEGIN_DICE", "#DS_END_DICE"],
+        ["#DS_BEGIN_PROCESS", "#DS_END_PROCESS"],
+        ["#DS_BEGIN_CPP", "#DS_END_CPP"],
+        ["```", "```!"]
     ],
     // symbols that are auto closed when typing
     "autoClosingPairs": [
@@ -31,7 +34,10 @@
         ["'", "'"],
         ["#DS_BEGIN_GLOBAL", "#DS_END_GLOBAL"],
         ["#DS_BEGIN_TASK", "#DS_END_TASK"],
-        ["#DS_BEGIN_DICE", "#DS_END_DICE"]
+        ["#DS_BEGIN_DICE", "#DS_END_DICE"],
+        ["#DS_BEGIN_PROCESS", "#DS_END_PROCESS"],
+        ["#DS_BEGIN_CPP", "#DS_END_CPP"],
+        ["```", "```!"]
     ],
     "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\?\\s]+)",
     "folding": {

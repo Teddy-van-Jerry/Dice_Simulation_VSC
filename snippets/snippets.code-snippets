@@ -3,8 +3,9 @@
         "prefix": ["#DS_BEGIN_GLOBAL"],
         "body": [
             "#DS_BEGIN_GLOBAL",
-            "\t\"Version\": \"${1:0.0.3}\" // Version of Dice Simulation",
-            "\t\"Gravity\": ${2:9.81} // [N/kg]",
+            "\t\"Version\": \"${1:0.1.0}\" // Version of Dice Simulation",
+            "\t\"Gravity\": [${3:\"g\"}] ${2:9.81} // [N/kg]",
+            "\t\"include\": ${4}",
             "#DS_END_GLOBAL"
         ],
         "description": "Dice Simulation Global Settings"
@@ -13,12 +14,22 @@
         "prefix": ["#DS_BEGIN_DICE"],
         "body": [
             "#DS_BEGIN_DICE",
-            "\t\"Name\": ${1:dice}",
+            "\t\"Name\": ${1} // Identifier of the Dice",
             "\t\"Type\": ${2} // Dice Type (\"Box\", \"Cylinder\")",
-            "\t\"Damping\": ${3:0} // Velocity Damping",
-            "\t\"Friction\": [\"${5:mu}\"] ${4:0} // Friction Coefficient",
-            "\t\"Position\": [\"${7:pos0}\"] (${6:0, 0, 0}) // Initial Position",
-            "\t\"Velocity\": [\"${9:v0}\"] (${8:0, 0, 0}) // Initial Velocity",
+            "\t\"Size_a\": ${3} // Half Extent of a Box (Discarded for Cylinder)", 
+            "\t\"Size_b\": ${4} // Half Extent of a Box (Discarded for Cylinder)", 
+            "\t\"Size_c\": ${5} // Half Extent of a Box (Discarded for Cylinder)", 
+            "\t\"Size_R\": ${6} // Radius of a Cylinder (Discarded for Box)", 
+            "\t\"Size_H\": ${7} // Height of a Cylinder (Discarded for Box)",
+            "\t\"Cylinder_Sides\": ${8:1000} // Number of Side Faces for the Cylinder", 
+            "\t\"Position\": (${9:0, 1, 0}) // Initial Position [m]",
+            "\t\"Orientation\": (${10:0, 0, 0, 0}) // Initial Position [m]",
+            "\t\"Velocity\": (${11:0, 0, 0}) // Initial Velocity [m/s]",
+            "\t\"Angular_Velocity\": (${12:0, 0, 0}) // Initial Angular Velocity [rad/s]",
+            "\t\"Friction\": ${13:0} // Friction Coefficient",
+            "\t\"Bounciness\": ${14:0.5} // Bounciness of the Material",
+            "\t\"Damping\": ${15:0} // Linear Velocity Damping",
+            "\t\"Angular_Damping\": ${16:0} // Angular Velocity Damping",
             "#DS_END_DICE"
         ],
         "description": "Dice Simulation Settings for a Dice"
@@ -27,7 +38,7 @@
         "prefix": ["#DS_BEGIN_TASK"],
         "body": [
             "#DS_BEGIN_TASK",
-            "\t\"Name\": ${1:task}",
+            "\t\"Name\": ${1}",
             "#DS_END_TASK"
         ],
         "description": "Dice Simulation Task"
@@ -36,7 +47,7 @@
         "prefix": "#DS_BEGIN_CPP",
         "body": [
             "#DS_BEGIN_CPP",
-            "${1}",
+            "\t${1}",
             "#DS_END_CPP"
         ],
         "description": "C++ Code (Especially Functions) Embedded in Dice Simulation"
@@ -47,6 +58,39 @@
             "#DS_BEGIN_PROCESS",
             "\t${1}",
             "#DS_END_PROCESS"
+        ]
+    },
+    "DS Task Call": {
+        "prefix": ["```", "DS_TASK_CALL"],
+        "body": [
+            "``` ${1}",
+            "\t${2}",
+            "```! // TASK: ${1}"
+        ]
+    },
+    "DS Task Call - simu": {
+        "prefix": ["``` simu", "DS_TASK_CALL - SIMU"],
+        "body": [
+            "``` simu",
+            "\t\"Dice\": ${1} // Dice for Simulation",
+            "\t\"Position\": (${2:0, 1, 0}) // Initial Position [m]",
+            "\t\"Orientation\": (${3:0, 0, 0, 0}) // Initial Position [m]",
+            "\t\"Velocity\": (${4:0, 0, 0}) // Initial Velocity [m/s]",
+            "\t\"Angular_Velocity\": (${5:0, 0, 0}) // Initial Angular Velocity [rad/s]",
+            "\t\"Friction\": ${6:0} // Friction Coefficient",
+            "\t\"Bounciness\": ${7:0.5} // Bounciness of the Material",
+            "\t\"Damping\": ${8:0} // Linear Velocity Damping",
+            "\t\"Angular_Damping\": ${9:0} // Angular Velocity Damping",
+            "\t\"Print\": ${10} // Contents to Print, Divided by ','",
+            "\t\"Print_Condition\": ${11:true} // The Condition Statement for Print",
+            "\t\"Time_Step\": ${12:1.0f / 60.0f} // Time Step for Simulation Update [s]",
+            "\t\"Time_Limit\": ${13: 30000} // Time Limit for Simulation [s]",
+            "\t\"Stop_Threshold\": ${14:1E-8} // Threshold for Velocity and Angular Velocity as Zero",
+            "\t\"Before_Update\": ${15} // C++ Commands to Add Before Simulation Update in Each Loop",
+            "\t\"After_Update_1\": ${16} // C++ Commands to Add Between Simulation Update and Print in Each Loop",
+            "\t\"After_Update_2\": ${17} // C++ Commands to Add Between Simulation Print and Stopping Condition Check in Each Loop",
+            "\t\"After_Update_3\": ${18} // C++ Commands to Add After Stopping Condition Check in Each Loop",
+            "```! // TASK: simu"
         ]
     }
 }
