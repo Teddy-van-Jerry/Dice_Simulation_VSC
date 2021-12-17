@@ -5,7 +5,7 @@
             "#DS_BEGIN_GLOBAL",
             "\t\"Version\": \"${1:0.1.0}\" // Version of Dice Simulation",
             "\t\"Gravity\": [${3:\"g\"}] ${2:9.81} // [N/kg]",
-            "\t\"include\": ${4}",
+            "\t\"Include\": ${4}",
             "#DS_END_GLOBAL"
         ],
         "description": "Dice Simulation Global Settings"
@@ -23,8 +23,8 @@
             "\t\"Size_H\": ${7} // Height of a Cylinder (Discarded for Box)",
             "\t\"Cylinder_Sides\": ${8:1000} // Number of Side Faces for the Cylinder", 
             "\t\"Position\": (${9:0, 1, 0}) // Initial Position [m]",
-            "\t\"Orientation\": (${10:0, 0, 0, 0}) // Initial Position [m]",
-            "\t\"Velocity\": (${11:0, 0, 0}) // Initial Velocity [m/s]",
+            "\t\"Orientation\": (${10:0, 0, 0, 0}) // Initial Orientation [m]",
+            "\t\"Velocity\": (${11:0, 0, 0}) // Initial Linear Velocity [m/s]",
             "\t\"Angular_Velocity\": (${12:0, 0, 0}) // Initial Angular Velocity [rad/s]",
             "\t\"Friction\": ${13:0} // Friction Coefficient",
             "\t\"Bounciness\": ${14:0.5} // Bounciness of the Material",
@@ -85,7 +85,7 @@
             "\t\"Print_Condition\": ${11:true} // The Condition Statement for Print",
             "\t\"Time_Step\": ${12:1.0f / 60.0f} // Time Step for Simulation Update [s]",
             "\t\"Time_Limit\": ${13: 30000} // Time Limit for Simulation [s]",
-            "\t\"Stop_Threshold\": ${14:1E-8} // Threshold for Velocity and Angular Velocity as Zero",
+            "\t\"Stop_Threshold\": ${14:1E-8} // Threshold for Velocity and Angular Velocity as Zero [m/s]",
             "\t\"Before_Update\": ${15} // C++ Commands to Add Before Simulation Update in Each Loop",
             "\t\"After_Update_1\": ${16} // C++ Commands to Add Between Simulation Update and Print in Each Loop",
             "\t\"After_Update_2\": ${17} // C++ Commands to Add Between Simulation Print and Stopping Condition Check in Each Loop",
