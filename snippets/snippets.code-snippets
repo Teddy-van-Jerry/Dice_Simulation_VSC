@@ -3,9 +3,10 @@
         "prefix": ["#DS_BEGIN_GLOBAL"],
         "body": [
             "#DS_BEGIN_GLOBAL",
-            "\t\"Version\": \"${1:0.1.0}\" // Version of Dice Simulation",
+            "\t\"Version\": \"${1:0.1.1}\" // Version of Dice Simulation",
             "\t\"Gravity\": [${3:\"g\"}] ${2:9.81} // [N/kg]",
             "\t\"Include\": ${4}",
+            "\t\"Random\": ${5:\"r\"} // Random Number Engine Name",
             "#DS_END_GLOBAL"
         ],
         "description": "Dice Simulation Global Settings"

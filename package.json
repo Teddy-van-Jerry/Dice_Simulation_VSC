@@ -3,7 +3,7 @@
 	"displayName": "Dice Simulation",
 	"description": "Code Support for Dice Simulation",
 	"icon": "img/icons/ds-icon_256.png",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "Teddy-van-Jerry",
 	"author": {
 		"name": "Teddy van Jerry",
